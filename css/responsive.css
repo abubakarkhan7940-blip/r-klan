@@ -1,0 +1,418 @@
+@media (max-width:1440px) {
+
+    /* Plight */
+    #plight .text {
+        padding: 10px 100px;
+    }
+
+    #plight p {
+        font-size: 15px;
+    }
+
+    #plight h2 {
+        font-size: 45px;
+    }
+
+    #plight .image {
+        height: auto;
+        min-height: 500px;
+    }
+
+    /* Plight */
+    /* book */
+    #book::before {
+        background-position: top left;
+        left: -130px;
+    }
+    /* book */
+    /* about-us */
+    /* plight */
+    #plight .text-1{
+        padding: 20px;
+    }
+    /* plight */
+    /* about-us */
+}
+
+@media (max-width:1200px) {
+
+    /* Family */
+    #family {
+        padding: 60px 15px;
+    }
+
+    #family img {
+        height: auto;
+    }
+
+    /* Family */
+    /* Plight */
+    #plight .text {
+
+        row-gap: 20px;
+    }
+    /* About-us */
+    /* Choose */
+    #choose .image{
+    min-height: 520px;
+    }
+    #choose::before{
+        width: 52%;
+    }
+    #choose .text {
+    row-gap: 15px;
+    }
+    #choose .para {
+    row-gap: 10px;
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .text {
+        row-gap: 10px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+
+    /* plight */
+    #plight {
+        padding-bottom: 70px;
+    }
+
+    #plight .text {
+        padding: 30px 30px;
+    }
+
+    #plight p {
+        font-size: 12px;
+    }
+
+    #plight h2 {
+        font-size: 30px;
+    }
+
+    /* plight */
+    /* Book */
+    #book .text {
+        padding: 25px 0px 0px;
+    }
+
+    #book::before {
+        left: -100px;
+    }
+
+    #book .content {
+        padding: 25px 0px 0px 25px;
+    }
+
+    /* Book */
+    /* shop */
+    #shop .content {
+        column-gap: 25px;
+    }
+
+    #shop h2 {
+        padding: 0px;
+    }
+
+    #shop h4 {
+        font-size: 25px;
+    }
+
+    /* Readers */
+    #readers .content {
+        flex-wrap: wrap;
+        column-gap: 15px;
+    }
+
+    #readers .common {
+        flex: 0 0 calc(50% - 7.5px);
+    }
+
+    #readers #diffrent {
+        margin-top: 100px;
+    }
+
+    /* Readers */
+}
+
+@media(max-width:991px) {
+
+    /* /Donate */
+    #donate .content {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 50px;
+    }
+
+    #donate .btn {
+        padding-left: 100px;
+    }
+
+    /* Donate */
+    /* R-Klan */
+    #r-klan .content-1 {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #r-klan .image-1 {
+        max-width: 188px;
+        margin-bottom: 35px;
+    }
+
+    #r-klan .text {
+        margin-top: 50px;
+    }
+
+    /* R-Klan */
+    /* About-us */
+    /* Choose */
+    #choose .image{
+    }
+    /* Choose */
+    /* About-us */
+}
+
+
+@media(max-width:767px) {
+    a {
+        padding: 8px 5px;
+    }
+
+    /* Family */
+    #family .image {
+        border: 10px solid rgb(255, 255, 235, 0.3);
+        /* margin-bottom: -140px; */
+    }
+
+    /* Family */
+    /* plight */
+    h4 {
+        font-size: 25px;
+    }
+    #plight .row {
+        flex-direction: column;
+    }
+
+    #plight .image {
+        min-height: 600px;
+        margin-right: 30px;
+    }
+
+    #plight .text {
+        padding: 10px 10px;
+    }
+
+    /* plight    */
+    /* Book */
+    #book h2,
+    h4 {
+        font-size: 25px;
+    }
+
+    #book .cimg {
+        margin-top: -100px;
+        margin-bottom: -60;
+    }
+
+    /* Book */
+    /* shop */
+    #shop h2 {
+        font-size: 40px;
+    }
+
+    #shop .content {
+        column-gap: 25px;
+    }
+
+    #shop .text {
+        flex-direction: column;
+    }
+
+    #shop h4 {
+        font-size: 30px;
+    }
+
+    /* shop */
+    /* Readers */
+    #readers .common {
+        flex: 0 0 100%;
+
+    }
+
+    #readers .diffrent {
+        margin-top: 100px;
+    }
+
+    /* readers */
+    /* R-Klan */
+    #r-klan .content-1 {
+        justify-content: center;
+    }
+
+    #r-klan .text {
+        margin-top: 50px;
+    }
+
+    /* R-Klan */
+    /* about-us */
+    /* plight */
+    #plight .row-1{
+        margin: 0px 15px;
+    }
+    #plight .image-1{
+        margin-right: 0px;
+    }
+    /* plight */
+    /* Choose */
+        #choose::before {
+            width: 100%;
+        }
+    #choose .contener{
+        flex-direction: column;
+    }
+    #choose .right{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #choose .image {
+        min-height: 400px;
+    }
+    #choose .text{
+        row-gap: 15px;
+        width: 100%;
+    }
+    #choose .para {
+        row-gap: 15px;
+    }
+    /* Choose */
+    /* about-us */
+}
+
+@media(max-width:640px) {
+
+    /* plight */
+    #plight .image {
+        min-height: 510px;
+    }
+
+    /* plight */
+    /* book */
+    #book .contener {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #book .content {
+        width: 100%;
+    }
+
+    #book .text {
+        padding: 85px 30px;
+        width: 100%;
+    }
+
+    /* book */
+    /* shop */
+    #shop .content {
+        column-gap: 15px;
+        flex-direction: column;
+    }
+
+    #shop img {
+        margin-top: 35px;
+    }
+
+    #shop h4 {
+        font-size: 25px;
+    }
+
+    /* shop */
+    /* Readers */
+    #readers .common {
+        flex: 0 0 100%;
+
+    }
+
+    #readers .diff {
+        margin-top: 100px;
+    }
+
+    /* Readers */
+    /* R-Klan */
+    #r-klan .content-1 {
+        justify-content: center;
+    }
+
+    #r-klan .image,
+    #r-klan .text {
+        flex: 0 0 100%;
+    }
+
+    #r-klan .text {
+        margin-top: 50px;
+    }
+
+    /* R-Klan */
+}
+
+@media(max-width:480px) {
+
+    /* plight */
+    #plight .image {
+        min-height: 365px;
+    }
+
+    /* plight */
+    /* Book */
+    #book .content {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    #book .image {
+        width: 100%;
+    }
+
+    #book h2,
+    h4 {
+        font-size: 30px;
+    }
+
+    /* Book */
+    /* shop */
+    #shop {
+        padding: 60px 10px;
+    }
+
+    /* shop */
+    #note {
+        padding: 60px 7px;
+    }
+    /* Choose */
+    /* about-us */
+    #choose .para p {
+    display: flex;
+     font-size: 12px;
+    }
+}
+
+@media(max-width:320px) {}
