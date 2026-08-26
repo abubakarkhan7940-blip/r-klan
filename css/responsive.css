@@ -65,7 +65,16 @@
     #choose .para {
     row-gap: 10px;
     }
-
+    /* Choose */
+    /* About-us */
+    /* Review */
+    /* Coment */
+    #reviews .common{
+        padding-right: 230px;
+    }
+    /* Coment */
+    /* Review */
+    
 }
 
 @media (max-width:1024px) {
@@ -183,12 +192,13 @@
     }
 
     /* R-Klan */
-    /* About-us */
-    /* Choose */
-    #choose .image{
+    /* Review */
+    /* Coment */
+    #reviews .common{
+        padding-right: 50px;
     }
-    /* Choose */
-    /* About-us */
+    /* Coment */
+    /* Review */
 }
 
 
@@ -372,6 +382,22 @@
     }
 
     /* R-Klan */
+    /* Review */
+    /* Coment */
+    #reviews .common{
+        padding: 30px 20px;
+    }
+    #reviews .image{
+        max-width: 80px;
+    }
+    #reviews .logo{
+        max-width: 35px;
+    }
+    #reviews .star{
+        max-width: 130px;
+    }
+    /* Coment */
+    /* Review */
 }
 
 @media(max-width:480px) {
@@ -413,6 +439,7 @@
     display: flex;
      font-size: 12px;
     }
+    
 }
 
 @media(max-width:320px) {}
