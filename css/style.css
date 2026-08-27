@@ -505,6 +505,7 @@ img {
 }
 #r-klan .text a{
     color: #d6dee9;
+    text-decoration: none;
 }
 #r-klan .cell {
     row-gap: 50px;
