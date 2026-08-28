@@ -63,6 +63,7 @@ a {
     color: #db0101;
     font-family: "Inter Tight", sans-serif;
     display: inline-block;
+    text-decoration: none;
 }
 
 img {
@@ -115,6 +116,7 @@ img {
     color: #db0101;
     display: flex;
 }
+
 .fa-brands{
     color: #c82424;
     border-radius: 50%;
@@ -126,6 +128,13 @@ img {
     height: 40px;
     border: 2px solid;
     aspect-ratio: 1/1;
+}
+#nav-bar li a:hover{
+    color: #f00000;
+}
+.fa-brands:hover {
+    color: white;
+    background-color:  #f00000;
 }
 /* Nav-Bar */
 /* Family */
