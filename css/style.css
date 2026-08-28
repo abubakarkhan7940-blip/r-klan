@@ -624,18 +624,27 @@ img {
 /* Contect */
 /* Form */
 #changed{
+    display: flex;
+    justify-content: center;
     background-color: white;
     width: 100%;
-    padding: 200px 0px 100px 0px;
+    padding: 200px 15px 100px ;
 }
 .plight{
    background-image: url('../Image/home/our-phlight.jpg');
     background-size: cover;
+    background-position: center left;
     height: auto;
     min-height: 80vh;
     width: 100%;
     border-radius: 20px 20px 20px 20px; 
 }
+#changed .contener{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
 .for{
     width: 100%;
 }
@@ -647,12 +656,11 @@ form .f-text{
 form .f-text{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
     margin-top: 10px;
 }
 .cell-0{
     width: 100%;
-    max-width: 470px;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #e3e3e3;
@@ -662,7 +670,6 @@ form .f-text{
 }
 .cell-1{
     width: 100%;
-    max-width: 470px;
     font-size: 25px;
     padding: 18px;
     border-radius: 5px;
@@ -675,12 +682,6 @@ form .f-text{
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
 } */
-.row-2{
-    display: flex;
-    align-items: center;
-    column-gap: 80px;
-    margin-left: 100px;
-}
 /* Form */
 /* Contect */
 /* Review */

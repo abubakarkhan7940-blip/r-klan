@@ -177,13 +177,16 @@
 
     /* Donate */
     /* R-Klan */
+    #r-klan{
+        padding: 60px 15px;
+    }
     #r-klan .content-1 {
         flex-wrap: wrap;
         flex-direction: column;
     }
 
     #r-klan .image-1 {
-        max-width: 188px;
+        max-width: 450px;
         margin-bottom: 35px;
     }
 
@@ -315,6 +318,16 @@
     }
     /* Choose */
     /* about-us */
+    /* contact-us */
+    #changed{
+    padding: 160px 15px 60px ;
+}
+    #changed .contener{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    /* contact-us */
+
 }
 
 @media(max-width:640px) {
