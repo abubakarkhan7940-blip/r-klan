@@ -195,10 +195,10 @@ img {
     padding: 200px 0px 100px 0px;
 }
 
-#plight .contener {
+#plight .row {
     display: flex;
     justify-content: center;
-    margin: 0px 15px;
+    align-items: center;
 }
 
 #plight .image {
@@ -554,8 +554,10 @@ img {
 /* R-Klan */
 /* About-Us */
 /* Plight */
-#plight .row-1{
-    margin-left: 100px;
+#plight .contener {
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px;
 }
 #plight .image-1{
     border-radius: 20px 20px 20px 20px;

@@ -89,7 +89,7 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .text {
@@ -109,9 +109,6 @@
         padding: 30px 30px;
     }
 
-    #plight p {
-        font-size: 12px;
-    }
 
     #plight h2 {
         font-size: 30px;
@@ -186,7 +183,6 @@
     }
 
     /* R-Klan */
-    
     /* Review */
     /* Coment */
     #reviews .common{
@@ -213,7 +209,7 @@
     h4 {
         font-size: 25px;
     }
-    #plight . {
+    #plight .row {
         flex-direction: column;
     }
 
@@ -458,7 +454,6 @@
     /* about-us */
     #choose .para p {
     display: flex;
-     font-size: 12px;
     }
     
 }
