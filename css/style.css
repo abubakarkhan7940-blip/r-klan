@@ -195,11 +195,10 @@ img {
     padding: 200px 0px 100px 0px;
 }
 
-.row {
-    width: 100%;
+#plight .contener {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin: 0px 15px;
 }
 
 #plight .image {

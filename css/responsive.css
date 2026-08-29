@@ -186,6 +186,7 @@
     }
 
     /* R-Klan */
+    
     /* Review */
     /* Coment */
     #reviews .common{
@@ -212,7 +213,7 @@
     h4 {
         font-size: 25px;
     }
-    #plight .row {
+    #plight . {
         flex-direction: column;
     }
 
@@ -296,8 +297,8 @@
     /* R-Klan */
     /* about-us */
     /* plight */
-    #plight .row-1{
-        margin: 0px 15px;
+    #plight .contener {
+        flex-direction: column;
     }
     #plight .image-1{
         margin-right: 0px;
