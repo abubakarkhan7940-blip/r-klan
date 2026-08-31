@@ -163,22 +163,62 @@ img {
     max-width: 990px;
 }
 
-#family .image {
-    border: 15px solid;
-    border-color: rgb(255, 255, 235, 0.3);
-    border-radius: 30px;
-    margin-bottom: -170px;
-    line-height: 0px;
-    position: relative;
-    z-index: 3;
+#family .slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: grab; /* Shows hand grab cursor to hint dragging */
 }
 
-#family img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 550px;
-    border-radius: 15px;
+.slider-container:active {
+  cursor: grabbing;
+}
+
+.slider-wrapper {
+  display: flex; /* Aligns slides horizontally side-by-side */
+  width: 100%;
+  height: 400px;
+  transition: transform 0.5s ease-in-out; /* Changed to ease-in-out for seamless looping loops */
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%; /* Ensures each slide matches container width exactly */
+  height: 100%;
+  user-select: none; /* Prevents text/image selection highlight while dragging */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Disables default browser image-dragging behavior */
+}
+
+/* Navigation Dots */
+.dots-container {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: white;
 }
 
 /* Family */
