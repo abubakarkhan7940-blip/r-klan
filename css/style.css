@@ -165,11 +165,10 @@ img {
 
 #family .slider-container {
   position: relative;
-  max-width: 800px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: grab; /* Shows hand grab cursor to hint dragging */
+    margin-bottom: -200px;
+    overflow: hidden;
+    cursor: grab;
+    z-index: 11;
 }
 
 .slider-container:active {
@@ -199,7 +198,6 @@ img {
 
 /* Navigation Dots */
 .dots-container {
-  position: absolute;
   bottom: 15px;
   width: 100%;
   text-align: center;
@@ -218,7 +216,7 @@ img {
 }
 
 .dot.active {
-  background-color: white;
+  background-color: #f00000;
 }
 
 /* Family */
