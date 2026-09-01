@@ -60,7 +60,7 @@ p {
 }
 
 a {
-    color: #db0101;
+    color: black;
     font-family: "Inter Tight", sans-serif;
     display: inline-block;
     text-decoration: none;
@@ -76,6 +76,7 @@ img {
     width: 100%;
     padding: 10px 15px;
     background-color: #fff;
+    position: relative;
     /* position: fixed;
     z-index: 15; */
 }
@@ -98,15 +99,34 @@ img {
 #nav-bar .img{
     max-width: 200px;
 }
-#nav-bar ul {
+#nav-bar .desktop-nav ul {
     display: flex;
     column-gap: 35px;
 }
+
 #nav-bar .text li{
     list-style: none;
     
 }
-#nav-bar li a{
+#nav-bar .mobile-nav{
+    background-color: #000;
+    color: white;
+}
+#nav-bar .texts li{
+    list-style: none;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid;
+}
+#nav-bar .texts li a{
+    color: white;
+}
+#nav-bar .icons {
+    padding: 15px;
+    display: flex;
+    column-gap: 10px;
+}
+#nav-bar text li a{
     color: #000;
     font-weight: 500;
     text-decoration: none;
@@ -120,12 +140,12 @@ img {
 .fa-brands{
     color: #c82424;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 15px;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: 2px solid;
     aspect-ratio: 1/1;
 }
