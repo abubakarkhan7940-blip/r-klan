@@ -1,151 +1,63 @@
-const wrapper = document.querySelector('.slider-wrapper');
-const container = document.querySelector('.slider-container');
-let slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
 
-// 1. Create clones for infinite structural looping
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slides.length - 1].cloneNode(true);
 
-// 2. Insert the clones at the ends of the slider track
-wrapper.appendChild(firstClone);
-wrapper.insertBefore(lastClone, slides[0]);
 
-// 3. Re-evaluate the slides list array with clones included
-slides = document.querySelectorAll('.slide');
-
-let currentIndex = 1; // Start at index 1 since index 0 is now the prepended clone
-let isDragging = false;
-let startX = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let autoSlideInterval;
-let isHovered = false; // Tracks if the mouse is currently hovering over the slider
-
-// Shift default position to point directly to the first original slide
-wrapper.style.transform = `translateX(${-container.offsetWidth}px)`;
-
-// Start the 4-second autoplay loop timer
-function startAutoSlide() {
-  stopAutoSlide(); 
-  // Only start the rotation if the user is not actively hovering with their mouse
-  if (!isHovered) {
-    autoSlideInterval = setInterval(() => {
-      currentIndex++;
-      wrapper.style.transition = 'transform 0.5s ease-in-out';
-      showSlide(currentIndex);
-    }, 4000); 
+class SiteHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      
+    `;
   }
 }
 
-// Stop the autoplay timer
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
+class SiteFooter extends HTMLElement {
+  connectedCallback() {
+    // Replace this with your actual footer HTML
+    this.innerHTML = `
+      <footer id="r-klan">
+        <div class="contener">
+            <div class="content">
+                <div class="content-1">
+                    <div class="image">
+                        <figure>
+                            <a href="index.html"><img src="Image/home/R-klan.png" alt="R-klan" class="img"></a>
+                        </figure>
 
-// Update visible slide position and dot states
-function showSlide(index) {
-  currentTranslate = index * -container.offsetWidth;
-  prevTranslate = currentTranslate;
-  
-  wrapper.style.transform = `translateX(${currentTranslate}px)`;
-  
-  // Calculate active indicator dot index dynamically based on cloning offsets
-  let dotIndex = index - 1;
-  if (index === slides.length - 1) dotIndex = 0;
-  if (index === 0) dotIndex = dots.length - 1;
+                        <figure>
+                            <div class="image-1">
+                                <a href="https://www.facebook.com" target="_blank"> <img src="Image/home/F.png" alt="face-book" class="you"></a>
+                                <a href="https://www.instagram.com" target="_blank"><img src="Image/home/Insta.png" alt="Insta" class="you"></a>
+                                <a href="https://in.linkedin.com" target="_blank"><img src="Image/home/in.png" alt="in" class="you"></a>
+                            </div>
+                        </figure>
 
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === dotIndex);
-  });
-}
-
-// Invisible alignment corrections run immediately after layout slide animation completes
-wrapper.addEventListener('transitionend', () => {
-  if (currentIndex === slides.length - 1) {
-    wrapper.style.transition = 'none'; // Turn off transition animations for instant reset teleport
-    currentIndex = 1;
-    showSlide(currentIndex);
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Our Cause</a></li>
+                            <li><a href="review.html">Reviews</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="text cell">
+                        <p>
+                            Address will come here,<br>
+                            Address will come here
+                        </p>
+                        <p><b>(123) 456-7890</b></p>
+                        <p>info@r-klan.com</p>
+                    </div>
+                </div>
+                <div class="content-2">
+                    <p>© 2026 R-Klan. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    `;
   }
-  if (currentIndex === 0) {
-    wrapper.style.transition = 'none';
-    currentIndex = slides.length - 2;
-    showSlide(currentIndex);
-  }
-});
-
-// Expose navigation to HTML inline onclick attributes
-window.currentSlide = function(index) {
-  currentIndex = index + 1; // Offset matching the prepended slide clone entry
-  wrapper.style.transition = 'transform 0.5s ease-in-out';
-  showSlide(currentIndex);
-  startAutoSlide(); // Reset tracking interval countdown timer
 }
 
-// --- Mouse Over / Hover Detection Functionality ---
-container.addEventListener('mouseenter', () => {
-  isHovered = true;
-  stopAutoSlide(); // Instantly turn off auto-rotation when mouse enters
-});
-
-container.addEventListener('mouseleave', () => {
-  isHovered = false;
-  startAutoSlide(); // Turn auto-rotation back on when mouse leaves
-});
-
-// --- Mouse Drag and Mobile Touch Mechanics ---
-container.addEventListener('mousedown', dragStart);
-container.addEventListener('mouseup', dragEnd);
-container.addEventListener('mouseleave', dragEnd);
-container.addEventListener('mousemove', dragAction);
-
-container.addEventListener('touchstart', dragStart);
-container.addEventListener('touchend', dragEnd);
-container.addEventListener('touchmove', dragAction);
-
-function getPosX(event) {
-  return event.type.includes('mouse') ? event.clientX : event.touches.clientX;
-}
-
-function dragStart(event) {
-  isDragging = true;
-  startX = getPosX(event);
-  stopAutoSlide(); // Double insurance to pause timer while dragging
-  wrapper.style.transition = 'none'; 
-}
-
-function dragAction(event) {
-  if (!isDragging) return;
-  const currentX = getPosX(event);
-  const diff = currentX - startX;
-  currentTranslate = (currentIndex * -container.offsetWidth) + diff;
-  wrapper.style.transform = `translateX(${currentTranslate}px)`;
-}
-
-function dragEnd() {
-  if (!isDragging) return;
-  isDragging = false;
-  wrapper.style.transition = 'transform 0.5s ease-in-out';
-
-  const actualTranslate = currentIndex * -container.offsetWidth;
-  const movedBy = currentTranslate - actualTranslate;
-
-  // Swipe threshold evaluation margin (Requires 100 pixels shift to turn slide)
-  if (movedBy < -100) {
-    currentIndex += 1;
-  } else if (movedBy > 100) {
-    currentIndex -= 1;
-  }
-
-  showSlide(currentIndex);
-  startAutoSlide(); // Attempt to resume rotation
-}
-
-// Keep slide alignments uniform during window resizing profiles
-window.addEventListener('resize', () => {
-  wrapper.style.transition = 'none';
-  showSlide(currentIndex);
-});
-
-// Initialize configurations on load
-startAutoSlide();
+// Define the custom tags
+customElements.define('site-header', SiteHeader);
+customElements.define('site-footer', SiteFooter);
