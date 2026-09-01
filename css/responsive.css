@@ -203,7 +203,11 @@
     a {
         padding: 8px 5px;
     }
-
+    /* nav-bar */
+    #nav-bar .icons{
+        column-gap: 0px;
+    }
+    /* nav-bar */
     /* Family */
     #family .image {
         border: 10px solid rgb(255, 255, 235, 0.3);
@@ -457,6 +461,10 @@
 
 @media(max-width:480px) {
     /* family */
+    .slide{
+        border: 10px solid;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
     .slider-wrapper{
         height: 160px;
     }
@@ -486,7 +494,7 @@
 
     /* shop */
     #note {
-        padding: 80px 7px;
+        padding: 80px 15px;
     }
     /* Choose */
     /* about-us */
