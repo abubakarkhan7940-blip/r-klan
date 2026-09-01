@@ -103,7 +103,11 @@ img {
     display: flex;
     column-gap: 35px;
 }
-
+#nav-bar .text ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
 #nav-bar .text li{
     list-style: none;
     
@@ -124,7 +128,7 @@ img {
 #nav-bar .icons {
     padding: 15px;
     display: flex;
-    column-gap: 10px;
+    column-gap: 10px; 
 }
 #nav-bar text li a{
     color: #000;
