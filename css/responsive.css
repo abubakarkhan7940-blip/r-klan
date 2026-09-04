@@ -87,7 +87,6 @@
     }
 
     p {
-        font-size: 15px;
     }
 
     .text {
@@ -101,9 +100,38 @@
     #nav-bar .content{
         flex-wrap: wrap;
     }
-    #nav-bar .mobile-nav{
-        flex: 0 0 100%;
-        margin-top: 5px;
+     .desktop-nav {
+    display: none;
+    /* Hide desktop nav */
+  }
+
+    .nav-toggle {
+    display: block;
+    /* Show hamburger button */
+    position: absolute;
+    right: 15px;
+    padding: 10px;
+    background-color: rgb(255, 47, 0);
+    border: 2px solid black;
+    cursor: pointer;
+  }
+    .nav-toggle i{
+        color: white;
+        font-size: 16px;
+    }
+    .mobile-nav{
+        display: none;
+
+    /* Hidden by default */
+     position: absolute; 
+    width: 100%;
+    left: 0px;
+    top: 90px;
+    padding-bottom: 20px;
+    z-index: 99; 
+    }
+    .mobile-nav.active{
+        display: block;
     }
     /* nav-bar */
     /* plight */

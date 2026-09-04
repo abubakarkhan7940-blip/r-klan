@@ -4,7 +4,62 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      
+      <header id="nav-bar">
+        <div class="contener">
+            <div class="content">
+                <div class="logo">
+                    <figure>
+                        <div class="img">
+                            <a href="index.html"><img src="Image/home/logo.png" alt="Logo" href="index.html"></a>
+                        </div>
+                    </figure>
+                </div>
+                <div class="desktop-nav">
+                    <div class="said">
+                        <div class="text">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Our Cause</a></li>
+                                <li><a href="review.html">Reviews</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.facebook.com" target="_blank"> <i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com " target="-blank"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://in.linkedin.com" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="mobile-nav" id="mobileNav">
+                    <div class="saids">
+                        <div class="texts">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Our Cause</a></li>
+                                <li><a href="review.html">Reviews</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="icons">
+                            <a href="https://www.facebook.com" target="_blank"> <i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com " target="-blank"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://in.linkedin.com" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     `;
   }
 }

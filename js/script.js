@@ -1,4 +1,20 @@
+// mobile-nav
+const navToggle = document.getElementById("navToggle");
+const mobileNav = document.getElementById("mobileNav");
+const toggleIcon = navToggle.querySelector("i");
 
+navToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('active');
+    
+    if (isOpen) {
+        toggleIcon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
+});
+
+// mobile-nav
+// Hero Slider
 const wrapper = document.querySelector('.slider-wrapper');
 const container = document.querySelector('.slider-container');
 let slides = document.querySelectorAll('.slide');
@@ -150,3 +166,5 @@ window.addEventListener('resize', () => {
 
 // Initialize configurations on load
 startAutoSlide();
+// Hero Slider
+

@@ -112,6 +112,17 @@ img {
     list-style: none;
     
 }
+
+#nav-bar text li a{
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+#nav-bar .icon-1{
+    max-width: 60px;
+    color: #db0101;
+    display: flex;
+}
 #nav-bar .mobile-nav{
     background-color: #000;
     color: white;
@@ -130,17 +141,10 @@ img {
     display: flex;
     column-gap: 10px; 
 }
-#nav-bar text li a{
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
+.mobile-nav,
+.nav-toggle{
+    display: none;
 }
-#nav-bar .icon-1{
-    max-width: 60px;
-    color: #db0101;
-    display: flex;
-}
-
 .fa-brands{
     color: #c82424;
     border-radius: 50%;
@@ -400,13 +404,15 @@ img {
 /* Readers */
 #readers {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     background-image: url('../Image/home/BG.jpg');
     background-size: cover;
     padding: 100px 15px;
 }
-
+#readers .contener{
+    display: flex;
+    flex-direction: column;
+}
 #readers h2 {
     text-align: center;
     margin: 20px 0px 100px;
