@@ -25,6 +25,12 @@
         left: -130px;
     }
     /* book */
+    /* Readers */
+    .rev-slider-box {
+        width: 85%;
+        max-width: 1200px;
+    }
+     /* Readers */
     /* about-us */
     /* plight */
     #plight .text-1{
@@ -49,6 +55,8 @@
 
         row-gap: 20px;
     }
+    /* Plight */
+     
     /* About-us */
     /* Choose */
     #choose .image{
@@ -179,19 +187,10 @@
     }
 
     /* Readers */
-    #readers .content {
-        flex-wrap: wrap;
-        column-gap: 15px;
-    }
 
-    #readers .common {
-        flex: 0 0 calc(50% - 7.5px);
-    }
-
-    #readers #diffrent {
-        margin-top: 100px;
-    }
-
+    .rev-item {
+    flex: 0 0 calc(50% - 12px);
+  }
     /* Readers */
 }
 
@@ -297,15 +296,14 @@
 
     /* shop */
     /* Readers */
-    #readers .common {
-        flex: 0 0 100%;
-
-    }
-
-    #readers .diffrent {
-        margin-top: 100px;
-    }
-
+    .rev-slider-box {
+    width: 86%;
+  }
+  .rev-item {
+    flex: 0 0 100%;
+  }
+  .rev-arrow.rev-prev { left: -20px; }
+  .rev-arrow.rev-next { right: -20px; }
     /* readers */
     /* /Donate */
     #donate {
@@ -524,6 +522,12 @@
     #note {
         padding: 80px 15px;
     }
+    /* Reader */
+    #readers h2{
+        font-size: 28px;
+    }
+    /* Reader */
+
     /* Choose */
     /* about-us */
     #choose .para p {
