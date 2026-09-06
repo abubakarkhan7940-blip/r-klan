@@ -4,7 +4,7 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header id="nav-bar">
+      <header id="nav-bar" class="r-klan-header">
         <div class="contener">
             <div class="content">
                 <div class="logo">
@@ -16,14 +16,14 @@ class SiteHeader extends HTMLElement {
                 </div>
                 <div class="desktop-nav">
                     <div class="said">
-                        <div class="text">
+                        <nav class="text">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About Our Cause</a></li>
                                 <li><a href="review.html">Reviews</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
-                        </div>
+                        </nav>
                         <div class="icon">
                             <a href="https://www.facebook.com" target="_blank"> <i
                                     class="fa-brands fa-facebook-f"></i></a>
@@ -39,14 +39,14 @@ class SiteHeader extends HTMLElement {
                 </button>
                 <div class="mobile-nav" id="mobileNav">
                     <div class="saids">
-                        <div class="texts">
+                        <nav class="text">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About Our Cause</a></li>
                                 <li><a href="review.html">Reviews</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
-                        </div>
+                        </nav>
                         <div class="icons">
                             <a href="https://www.facebook.com" target="_blank"> <i
                                     class="fa-brands fa-facebook-f"></i></a>

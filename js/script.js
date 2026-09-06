@@ -14,6 +14,13 @@ navToggle.addEventListener('click', () => {
 });
 
 // mobile-nav
+// Active Link
+const activeLink = document.querySelectorAll('.r-klan-header  .text ul li a')
+
+  activeLink.forEach(link => {
+    if (link.href === window.location.href) link.classList.add('active');
+});
+// Active Link
 // Hero Slider
 const wrapper = document.querySelector('.slider-wrapper');
 const container = document.querySelector('.slider-container');

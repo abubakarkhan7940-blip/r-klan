@@ -43,9 +43,6 @@
 @media (max-width:1200px) {
 
     /* Family */
-    #family {
-        padding: 60px 15px;
-    }
     .slider-wrapper{
         height: 400px;
     }
@@ -135,7 +132,6 @@
     width: 100%;
     left: 0px;
     top: 90px;
-    padding-bottom: 20px;
     z-index: 99; 
     }
     .mobile-nav.active{
@@ -387,9 +383,6 @@
     /* family */
     .slider-wrapper{
         height: 260px;
-    }
-    .slider-container{
-        margin-bottom: -120px;
     }
     /* family */
     /* plight */
