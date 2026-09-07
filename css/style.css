@@ -214,7 +214,7 @@ img {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 140px 15px 100px;
+    padding: 140px 15px 0px;
     background-color: #142749;
 }
 
@@ -236,20 +236,27 @@ img {
 }
 
 #family .image {
+    width: 100%;
+    max-width: 1300px;
     border: 15px solid rgba(255, 255, 235, 0.3);
     border-radius: 30px;
-    margin-bottom: -200px;
+    margin-bottom: -100px;
     position: relative;
     z-index: 3;
 }
-
+.position-right{
+    object-position: center right;
+}
 #family .image img {
     border-radius: 15px;
+    object-fit: cover; 
+    height: 600px;
+    /* object-position: center right; */
 }
 
 .slider-container {
     position: relative;
-    margin-bottom: -200px;
+    margin-bottom: -100px;
     overflow: hidden;
     cursor: grab;
     z-index: 11;
