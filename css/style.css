@@ -247,6 +247,9 @@ img {
 .position-right{
     object-position: center right;
 }
+.position-bottom{
+    object-position: center bottom;
+}
 #family .image img {
     border-radius: 15px;
     object-fit: cover; 
