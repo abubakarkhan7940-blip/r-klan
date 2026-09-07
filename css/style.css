@@ -116,7 +116,9 @@ img {
     align-items: center;
     column-gap: 25px;
 }
-
+#nav-bar .text{
+    font-size: 17px;
+}
 #nav-bar .icon {
     display: flex;
     font-size: 25px;
@@ -189,23 +191,25 @@ img {
 .fa-brands {
     color: #c82424;
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 25px;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border: 2px solid;
     aspect-ratio: 1/1;
 }
 
 #nav-bar li a:hover {
     color: #f00000;
+    transition: 1s;
 }
 
 .fa-brands:hover {
     color: white;
     background-color: #f00000;
+    transition: 1s;
 }
 
 /* Nav-Bar */
@@ -782,7 +786,10 @@ img {
     color: #d6dee9;
     text-decoration: none;
 }
-
+#r-klan .text a:hover, #r-klan .cell p:hover, #r-klan .cell p:nth-child(2):hover{
+    color: #db0101;
+    transition: 1s;
+}
 #r-klan .cell {
     row-gap: 50px;
 }
@@ -790,9 +797,11 @@ img {
 #r-klan .cell p:nth-child(2) {
     color: white;
 }
-
+#r-klan .text{
+    font-size: 20px;
+}
 #r-klan .you {
-    max-width: 50px;
+    max-width: 60px;
 }
 
 #r-klan .cell p:first-child,
