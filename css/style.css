@@ -79,10 +79,29 @@ img {
     width: 100%;
     padding: 10px 15px;
     background-color: #fff;
-    position: relative;
     position: fixed;
-    z-index: 15; 
+    top: 0;
+    left: 0;
+    z-index: 15;
+    
+    /* Smooth transition for sliding and shadow changes */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.3s ease;
+    
+    /* Visible by default at the top */
+    transform: translateY(0);
 }
+
+#nav-bar.nav-hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
+/* Class used to smoothly slide the header back down from top to bottom */
+#nav-bar.nav-visible {
+    transform: translateY(0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}   
 
 #nav-bar .content {
     display: flex;
@@ -194,7 +213,7 @@ img {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 110px 15px;
+    padding: 140px 15px 100px;
     background-color: #142749;
 }
 
@@ -216,9 +235,9 @@ img {
 }
 
 #family .image {
-    border: 10px solid rgba(255, 255, 235, 0.3);
+    border: 15px solid rgba(255, 255, 235, 0.3);
     border-radius: 30px;
-    margin-bottom: -140px;
+    margin-bottom: -200px;
     position: relative;
     z-index: 3;
 }
@@ -487,18 +506,27 @@ img {
     transition: none;
 }
 
-/* Individual Review Card */
+
+
+/* Update .rev-item base shadow to be subtle or remove heavy shadow */
 .rev-item {
-    background-color: var(--rev-box-bg);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    padding: 30px 24px;
-    position: relative;
-    text-align: center;
-    margin-top: 40px;
-    flex: 0 0 calc(33.333% - 16px);
-    box-sizing: border-box;
-    box-shadow: 5px 0px 17px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--rev-box-bg);
+  border-radius: 12px;
+  padding: 30px 24px;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+  flex: 0 0 calc(33.333% - 16px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* lighter default shadow */
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Enhanced shadow and scaling applied strictly to the active center card */
+.rev-item.rev-center-active {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: scale(1.03); /* Slightly lifts and enlarges the center card */
+  z-index: 2;
 }
 
 .rev-item * {

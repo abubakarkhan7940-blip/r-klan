@@ -1,3 +1,32 @@
+
+// header
+// Add this script block to handle the 200px scroll threshold trigger
+
+const navBar = document.getElementById('nav-bar');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 200) {
+        // Within the first 150px from the top: always keep the header fully visible normally
+        navBar.classList.remove('nav-hidden', 'nav-visible');
+    } else {
+        // Past the 150px threshold: check scroll direction (reversed)
+        if (currentScrollY < lastScrollY) {
+            // Scrolling UP past 150px -> hide header upwards
+            navBar.classList.add('nav-hidden');
+            navBar.classList.remove('nav-visible');
+        } else {
+            // Scrolling DOWN past 150px -> smoothly slide header down from top to bottom
+            navBar.classList.remove('nav-hidden');
+            navBar.classList.add('nav-visible');
+        }
+    }
+
+    lastScrollY = currentScrollY;
+});
+// header
 // mobile-nav
 const navToggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
@@ -174,7 +203,7 @@ window.addEventListener('resize', () => {
 // Initialize configurations on load
 startAutoSlide();
 // Hero Slider
-
+// commonts
 const revContainer = document.querySelector('.rev-slider-box');
 const revTrack = document.getElementById('revTrack');
 const revPrevBtn = document.getElementById('revPrevBtn');
@@ -347,3 +376,42 @@ setTimeout(() => {
   moveRevSlider(false);
   startRevAutoRotate();
 }, 50);
+// Add this helper function to dynamically assign/update the center active class
+function updateCenterCardHighlight() {
+  const allCards = Array.from(revTrack.children);
+  allCards.forEach(card => card.classList.remove('rev-center-active'));
+
+  // Determine the index of the visual center card based on viewport count
+  let centerOffset = 1; // For 3 visible cards, index + 1 is the middle card
+  if (revVisibleCards === 1) {
+    centerOffset = 0;
+  } else if (revVisibleCards === 2) {
+    centerOffset = 0;
+  }
+
+  const targetIndex = revCurrentIndex + centerOffset;
+  if (allCards[targetIndex]) {
+    allCards[targetIndex].classList.add('rev-center-active');
+  }
+}
+
+// Call updateCenterCardHighlight() inside your moveRevSlider function:
+function moveRevSlider(animate = true) {
+  if (revIsDragging) return;
+  
+  const { cardWidth, gap } = getRevCardWidthAndGap();
+  const offset = revCurrentIndex * (cardWidth + gap);
+
+  if (animate) {
+    revTrack.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+  } else {
+    revTrack.style.transition = 'none';
+  }
+  
+  revCurrentTranslate = -offset;
+  revPrevTranslate = revCurrentTranslate;
+  revTrack.style.transform = `translateX(${revCurrentTranslate}px)`;
+
+  updateCenterCardHighlight(); // Updates the center shadow highlight on every move
+}
+// commonts
