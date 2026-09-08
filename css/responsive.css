@@ -192,31 +192,17 @@
     .rev-item {
     flex: 0 0 calc(50% - 12px);
   }
+  .rev-item.rev-center-active {
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.9);
+  transform: scale(1);
     /* Readers */
+}
 }
 
 @media(max-width:991px) {
 
     
-    /* R-Klan */
-    #r-klan{
-        padding: 60px 15px;
-    }
-    #r-klan .content-1 {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    #r-klan .image-1 {
-        max-width: 450px;
-        margin-bottom: 35px;
-    }
-
-    #r-klan .text {
-        margin-top: 50px;
-    }
-
-    /* R-Klan */
+    
     /* Review */
     /* Coment */
     #reviews .common{
@@ -326,12 +312,30 @@
 
     /* Donate */
     /* R-Klan */
-    #r-klan .content-1 {
-        justify-content: center;
+     #r-klan{
+        padding: 60px 15px;
     }
+    
+    
+    #r-klan .content-1 {
+        flex-wrap: wrap;
+    }
+    #r-klan .image{
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #r-klan .image:first-child img{
+        max-width: 350px;
+    }
+    #r-klan .image-1 {
 
+        margin-bottom: 35px;
+    } 
     #r-klan .text {
         margin-top: 50px;
+        flex: 0 0 50%;
     }
 
     /* R-Klan */
@@ -450,15 +454,6 @@
         justify-content: center;
     }
 
-    #r-klan .image,
-    #r-klan .text {
-        flex: 0 0 100%;
-    }
-
-    #r-klan .text {
-        margin-top: 50px;
-    }
-
     /* R-Klan */
     /* about-us */
     /* plight */
@@ -531,6 +526,15 @@
         font-size: 28px;
     }
     /* Reader */
+    /* R-Klan */
+     #r-klan .text {
+        flex: 0 0 100%;
+    }
+
+    #r-klan .text {
+        margin-top: 50px;
+    }
+    /* R-Klan */
 
     /* Choose */
     /* about-us */

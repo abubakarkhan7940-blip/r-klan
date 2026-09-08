@@ -110,7 +110,9 @@ img {
     transform: translateY(0);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }   
-
+#nav-bar.nav-visible img{
+    max-width: 160px;
+}
 #nav-bar .content {
     display: flex;
     justify-content: space-between;
@@ -484,7 +486,7 @@ img {
     justify-content: center;
     background-image: url('../Image/home/BG.jpg');
     background-size: cover;
-    padding: 100px 15px;
+    padding: 100px 15px 60px;
 }
 
 #readers .contener {
@@ -513,7 +515,7 @@ img {
 .rev-viewport {
     width: 100%;
     overflow: hidden;
-    padding: 12px 0;
+    padding: 12px 0px 50px;
 }
 
 /* Track holding the cards */
@@ -521,7 +523,7 @@ img {
     display: flex;
     gap: 24px;
     width: 100%;
-    will-change: transform;
+    /* will-change: transform; */
     transition: none;
 }
 
@@ -543,9 +545,9 @@ img {
 
 /* Enhanced shadow and scaling applied strictly to the active center card */
 .rev-item.rev-center-active {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
   transform: scale(1.03); /* Slightly lifts and enlarges the center card */
-  z-index: 2;
+  z-index: 3;
 }
 
 .rev-item * {
@@ -742,7 +744,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 15px;
+    padding: 100px 15px 35px;
     width: 100%;
     background-color: #142749;
 }
@@ -765,7 +767,7 @@ img {
     display: flex;
     flex-direction: column;
     row-gap: 60px;
-    max-width: 450px;
+    max-width: 350px;
     width: 100%;
 }
 
