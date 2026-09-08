@@ -12,7 +12,14 @@ html,
 body {
     overflow-x: clip;
 }
-
+:root {
+    --rev-bg-theme: #f4f6f9;
+    --rev-box-bg: #ffffff;
+    --rev-font-color: #333333;
+    --rev-star-tone: #ffb703;
+    --rev-icon-color: #c82424;
+    --rev-bg-mobile: #000;
+}
 .contener {
     width: 100%;
     max-width: 1280px;
@@ -51,7 +58,7 @@ p {
     background: linear-gradient(90deg, rgba(151, 0, 0, 1) 26%, rgba(230, 0, 0, 1) 66%);
     padding: 20px 20px;
     border-radius: 8px;
-    color: #fff;
+    color: var(--rev-box-bg);
     text-decoration: none;
 }
 
@@ -78,7 +85,7 @@ img {
     justify-content: center;
     width: 100%;
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: var(--rev-box-bg);
     position: fixed;
     top: 0;
     left: 0;
@@ -151,14 +158,14 @@ img {
     text-decoration: none;
 }
 
-#nav-bar .icon-1 {
+/* #nav-bar .icon-1 {
     max-width: 60px;
     color: #db0101;
     display: flex;
-}
+} */
 
 .r-klan-header .mobile-nav {
-    background-color: #000;
+    background-color: var(--rev-bg-mobile);
 }
 #nav-bar .mobile-nav .text ul {
     display: block;
@@ -167,11 +174,13 @@ img {
     padding: 15px;
     font-size: 18px;
     border-bottom: 2px solid;
-    border-color: white;
+    border-color: var(--rev-box-bg);
 }
-
+.r-klan-header .mobile-nav .text li:hover{
+    background-color: var(--rev-icon-color);
+}
 .r-klan-header .mobile-nav .text li a {
-    color: white;
+    color: var(--rev-box-bg);
     list-style: none;
 }
 
@@ -181,7 +190,7 @@ img {
     column-gap: 10px;
 }
 .r-klan-header .text ul li a.active{
-    color: #c82424;
+    color: var(--rev-icon-color);
 }
 .mobile-nav,
 .nav-toggle {
@@ -189,7 +198,7 @@ img {
 }
 
 .fa-brands {
-    color: #c82424;
+    color: var(--rev-icon-color);
     border-radius: 50%;
     font-size: 25px;
     display: flex !important;
@@ -202,13 +211,13 @@ img {
 }
 
 #nav-bar li a:hover {
-    color: #f00000;
+    color: var(--rev-icon-color);
     transition: 1s;
 }
 
 .fa-brands:hover {
-    color: white;
-    background-color: #f00000;
+    color: var(--rev-box-bg);
+    background-color: var(--rev-icon-color);
     transition: 1s;
 }
 
@@ -226,7 +235,7 @@ img {
     display: flex;
     width: 100%;
     flex-direction: column;
-    color: white;
+    color: var(--rev-box-bg);
     row-gap: 30px;
 }
 
@@ -323,7 +332,7 @@ img {
 }
 
 .dot.active {
-    background-color: #f00000;
+    background-color: var(--rev-icon-color);
 }
 
 /* Family */
@@ -419,7 +428,7 @@ img {
 }
 
 #book p {
-    color: #db0101;
+    color: var(--rev-icon-color);
 }
 
 /* Book */
@@ -463,17 +472,12 @@ img {
 }
 
 #shop p {
-    color: #db0101;
+    color: var(--rev-icon-color);
 }
 
 /* Shop */
 /* Readers */
-:root {
-    --rev-bg-theme: #f4f6f9;
-    --rev-box-bg: #ffffff;
-    --rev-font-color: #333333;
-    --rev-star-tone: #ffb703;
-}
+
 
 #readers {
     display: flex;
@@ -590,7 +594,7 @@ img {
 .rev-author {
     font-size: 25px;
     font-weight: 400;
-    color: #000000;
+    color: var(--rev-bg-mobile);
     margin-top: 70px;
     margin-bottom: 10px;
 }
@@ -631,7 +635,7 @@ img {
 
 .rev-arrow:hover {
     background-color: #a70000;
-    border-color: #a70000;
+    border-color: var(--rev-icon-color);
 }
 
 .rev-arrow svg {
@@ -642,7 +646,7 @@ img {
 }
 
 .rev-arrow:hover svg {
-    fill: #ffffff;
+    fill: var(--rev-box-bg);
 }
 
 .rev-arrow.rev-prev {
@@ -694,7 +698,7 @@ img {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    color: white;
+    color: var(--rev-box-bg);
 }
 
 #note h4 {
@@ -787,7 +791,7 @@ img {
     text-decoration: none;
 }
 #r-klan .text a:hover, #r-klan .cell p:hover, #r-klan .cell p:nth-child(2):hover{
-    color: #db0101;
+    color: var(--rev-icon-color);
     transition: 1s;
 }
 #r-klan .cell {
@@ -795,7 +799,7 @@ img {
 }
 
 #r-klan .cell p:nth-child(2) {
-    color: white;
+    color: var(--rev-box-bg);
 }
 #r-klan .text{
     font-size: 20px;
@@ -916,7 +920,7 @@ img {
     font-weight: 400;
     font-family: "Font Awesome 6 Free";
     padding-right: 15px;
-    color: #c20101;
+    color: var(--rev-icon-color);
 }
 
 /* Choose */
@@ -926,7 +930,7 @@ img {
 #changed {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--rev-box-bg);
     width: 100%;
     padding: 200px 15px 100px;
 }
@@ -991,11 +995,11 @@ input, textarea {
 #changed input:focus, #changed textarea:focus{
     border: 1px solid rgb(255, 52, 52);
 }
-/* .sum::after{
+#changed button::after{
     content: "\f061";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-} */
+}
 /* Form */
 /* Contect */
 /* Review */
