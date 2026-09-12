@@ -60,6 +60,7 @@ p {
     border-radius: 8px;
     color: var(--rev-box-bg);
     text-decoration: none;
+    
 }
 
 .btn a::after {
@@ -67,12 +68,14 @@ p {
     font-weight: 900;
     font-family: "Font Awesome 6 Free";
     padding: 10px 10px 20px;
+    
 }
 
 a {
     font-family: "Inter Tight", sans-serif;
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
 }
 
 img {
@@ -90,14 +93,12 @@ img {
     top: 0;
     left: 0;
     z-index: 15;
-    
     /* Smooth transition for sliding and shadow changes */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                box-shadow 0.3s ease;
-    
+    transition: transform 0.4s ease-in-out;
     /* Visible by default at the top */
     transform: translateY(0);
 }
+
 
 /* Class used to slide the header completely out of view upwards */
 #nav-bar.nav-hidden {
@@ -109,6 +110,7 @@ img {
 #nav-bar.nav-visible {
     transform: translateY(0);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding:20px 15px
 }   
 #nav-bar.nav-visible img{
     max-width: 160px;

@@ -8,7 +8,7 @@ let lastScrollY = window.scrollY;
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY <= 200) {
+    if (currentScrollY <= 00) {
         // Within the first 150px from the top: always keep the header fully visible normally
         navBar.classList.remove('nav-hidden', 'nav-visible');
     } else {
