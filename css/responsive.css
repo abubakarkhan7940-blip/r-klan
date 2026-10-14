@@ -236,6 +236,9 @@
 
     /* Family */
     /* plight */
+    .pli-ght{
+        padding: 100px 0px 60px 0px !important;
+    }
     h4 {
         font-size: 25px;
     }
@@ -343,7 +346,7 @@
     /* plight */
     
     #plight{
-        padding: 140px 0px 60px 0px;
+        padding: 150px 0px 60px 0px;
     }
     #plight .contener {
         flex-direction: column;
@@ -379,9 +382,20 @@
     }
     /* Choose */
     /* about-us */
+
+    /* -- Review -- */
+    /* comment */
+
+    #reviews{
+        padding: 140px 15px 60px;
+    }
+
+    /* comment */
+    /* -- Review -- */
+
     /* contact-us */
     #changed{
-    padding: 160px 15px 60px ;
+    padding: 150px 15px 60px ;
 }
     #changed .contener{
         flex-direction: column;
@@ -508,7 +522,12 @@
 
     #book .image {
         width: 100%;
+        bottom: 0;
     }
+
+        #book .text{
+            padding: 0px 30px 60px;
+        }
 
     #book h2,
     h4 {

@@ -44,9 +44,16 @@ navToggle.addEventListener('click', () => {
 
 // mobile-nav
 // Active Link
-const activeLink = document.querySelectorAll('.r-klan-header  .text ul li a')
+const activeLink = document.querySelectorAll('.r-klan-header .desktop-nav li a' )
 
   activeLink.forEach(link => {
+    if (link.href === window.location.href) link.classList.add('active');
+});
+
+
+const activeMobileLink = document.querySelectorAll('.r-klan-header  .mobile-nav .text ul li a')
+
+  activeMobileLink.forEach(link => {
     if (link.href === window.location.href) link.classList.add('active');
 });
 // Active Link
